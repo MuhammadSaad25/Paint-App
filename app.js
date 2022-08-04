@@ -26,3 +26,11 @@ let colorSelect = (event) => {
     }
   });
 };
+
+let download =()=>{
+	let canvas =document.querySelector('#myCanvas');
+	let anchor=document.createElement('a');
+	anchor.href=canvas.toDataURL('image/png');
+	anchor.download='image.png';
+	anchor.click();
+}
