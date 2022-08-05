@@ -9,21 +9,21 @@
     <title>Paint App</title>
 </head>
 
-<body class="align">
+<body>
+    <div class="container">
+        <h3>Start Your Drwaing</h3>
+        <canvas id="myCanvas" height="500" width="500">
 
-    <h3>Start Your Drwaing</h3>
-    <canvas id="myCanvas">
+        </canvas>
 
-    </canvas>
-
-    <div class="formDiv">
-        <form onsubmit="colorSelect(event)">
-            <input type="color" id="colorBox">
-            <button>Select</button>
-        </form>
-        <button onclick="download()">Download Image</button>
+        <div class="formDiv">
+            <form onsubmit="colorSelect(event)">
+                <input type="color" id="colorBox">
+                <button>Select</button>
+            </form>
+            <button onclick="download()">Download Image</button>
+        </div>
     </div>
-
     <script src="./app.js"></script>
 </body>
 
