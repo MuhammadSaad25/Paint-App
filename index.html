@@ -11,15 +11,20 @@
 
 <body>
     <div class="container">
-        <h3>Start Your Drwaing</h3>
-        <canvas id="myCanvas" height="500" width="800">
+
+        <div class="tools">
+            <input type="color" id="colorBox" onchange="colorSelect(event)">
+            <input type="range" min="1" max="100" class="pointer_size">
+            <button type="button" class="btn">U</button>
+            <button type="button" class="btn">c</button>
+            <button onclick="download()">D</button>
+        </div>
+
+        <canvas id="myCanvas">
 
         </canvas>
 
-        <div class="formDiv">
-                <input type="color" id="colorBox" onchange="colorSelect(event)">
-            <button onclick="download()">Download Image</button>
-        </div>
+
     </div>
     <script src="./app.js"></script>
 </body>
