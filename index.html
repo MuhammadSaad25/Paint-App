@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/6b896963d9.js" crossorigin="anonymous"></script>
     <title>Paint App</title>
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="tools">
-            <input type="color" id="colorBox" onchange="colorSelect(event)">
-            <input type="range" min="1" max="100" class="pointer_size">
-            <button type="button" class="btn">U</button>
-            <button type="button" class="btn">c</button>
-            <button onclick="download()">D</button>
+    <div class="tools">
+        <input type="color" id="colorBox" onchange="colorSelect(event)">
+        <div class="slider" style="text-align: center;">
+            <input type="range" value="10" min="1" max="100" class="pen_size">
+            <div class="value">100</div>
         </div>
-
-        <canvas id="myCanvas">
-
-        </canvas>
-
-
+        <button title="Undo" type="button" class="btn"><i class="fa-solid fa-reply"></i></button>
+        <button title="Clear" type="button" class="btn"><i class="fa-solid fa-trash"></i></button>
+        <button title="Dounload" onclick="download()" class="btn"><i class="fa-solid fa-download"></i></button>
     </div>
+
+    <canvas id="myCanvas">
+
+    </canvas>
+
     <script src="./app.js"></script>
 </body>
 
