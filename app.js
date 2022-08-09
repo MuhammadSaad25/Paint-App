@@ -95,11 +95,17 @@ let download = () => {
   anchor.click();
 };
 
+const size = document.querySelector(".pen_size")
+
+function show() {
+  size.style.display = "inline";
+  size.style.height = "30px" 
+};
+
 // slider script 
 
-const slider = document.querySelector(".pen_size")
-const value = document.querySelector(".value")
-value.textContent = slider.value;
-slider.oninput = function () {
-  value.textContent = this.value;
-}
+// const slider = document.querySelector(".pen_size")
+// value.textContent = slider.value;
+// slider.oninput = function () {
+//   value.textContent = `${this.value}Px `;
+// }
