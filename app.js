@@ -43,14 +43,43 @@
 // };
 
 const canvas = document.querySelector('#myCanvas');
-canvas.width = window.innerWidth - 275;
-canvas.height = 400;
+canvas.width = window.innerWidth - 100;
+canvas.height = 615;
 
 
 let ctx = canvas.getContext("2d");
 
+let drawColor = "black";
+let drwaWidth = "10";
+let isDrawing = false;
 
 
+canvas.addEventListener("touchstart", start, false
+);
+canvas.addEventListener("touchmove", draw, false
+);
+canvas.addEventListener("mousedown", start, false
+);
+canvas.addEventListener("mousemove", draw, false
+);
+
+function start(event) {
+  isDrawing = true;
+  ctx.beginPath();
+  ctx.moveTo(event.offsetX, event.offsetY);
+event.preventDefault();
+}
+
+function draw(event){
+  if(isDrawing) {
+    ctx.lineTo(event.offsetX, event.offsetY);
+      ctx.strokeStyle = drawColor;
+      ctx.linewidth = drwaWidth;
+      ctx.lineCap = "round"
+      ctx.lineJoin = "round"
+      ctx.stroke();
+  }
+}
 
 
 

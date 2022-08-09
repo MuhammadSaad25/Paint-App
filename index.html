@@ -11,21 +11,22 @@
 </head>
 
 <body>
-    <div class="tools">
-        <input type="color" id="colorBox" onchange="colorSelect(event)">
-        <div class="slider" style="text-align: center;">
-            <input type="range" value="10" min="1" max="100" class="pen_size">
-            <div class="value">100</div>
-        </div>
-        <button title="Undo" type="button" class="btn"><i class="fa-solid fa-reply"></i></button>
-        <button title="Clear" type="button" class="btn"><i class="fa-solid fa-trash"></i></button>
-        <button title="Dounload" onclick="download()" class="btn"><i class="fa-solid fa-download"></i></button>
+    <div class="container">
+        <span class="tools">
+            <input type="color" id="colorBox" onchange="colorSelect(event)">
+            <div class="slider" style="text-align: center;">
+                <input type="range" value="10" min="1" max="100" class="pen_size">
+                <div class="value">100</div>
+            </div>
+            <button title="Undo" type="button" class="btn"><i class="fa-solid fa-reply"></i></button>
+            <button title="Clear" type="button" class="btn"><i class="fa-solid fa-trash"></i></button>
+            <button title="Dounload" onclick="download()" class="btn"><i class="fa-solid fa-download"></i></button>
+        </span>
+
+        <canvas id="myCanvas">
+
+        </canvas>
     </div>
-
-    <canvas id="myCanvas">
-
-    </canvas>
-
     <script src="./app.js"></script>
 </body>
 
